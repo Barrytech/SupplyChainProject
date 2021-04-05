@@ -45,7 +45,6 @@ contract FarmerRole {
     farmers.add(account);
     emit FarmerAdded(account);
   }
-
   // Define an internal function '_removeFarmer' to remove this role, called by 'removeFarmer'
   function _removeFarmer(address account) internal {
     farmers.remove(account);
