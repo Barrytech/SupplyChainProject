@@ -35,12 +35,12 @@ contract('SupplyChain', function(accounts) {
     ///(8) 0xe07b5ee5f738b2f87f88b99aac9c64ff1e0c7917
     ///(9) 0xbd3ff2e3aded055244d66544c9c059fa0851da44
 
-    console.log("ganache-cli accounts used here...")
-    console.log("Contract Owner: accounts[0] ", accounts[0])
-    console.log("Farmer: accounts[1] ", accounts[1])
-    console.log("Distributor: accounts[2] ", accounts[2])
-    console.log("Retailer: accounts[3] ", accounts[3])
-    console.log("Consumer: accounts[4] ", accounts[4])
+    console.log("ganache-cli accounts used here...");
+    console.log("Contract Owner: accounts[0] ", accounts[0]);
+    console.log("Farmer: accounts[1] ", accounts[1]);
+    console.log("Distributor: accounts[2] ", accounts[2]);
+    console.log("Retailer: accounts[3] ", accounts[3]);
+    console.log("Consumer: accounts[4] ", accounts[4]);
 
     // 1st Test
     it("Testing smart contract function harvestItem() that allows a farmer to harvest coffee", async() => {
@@ -73,7 +73,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude');
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State');
         assert.equal(eventEmitted, true, 'Invalid event emitted');
-    })
+    });
 
     // 2nd Test
     it("Testing smart contract function processItem() that allows a farmer to process coffee", async() => {
@@ -170,7 +170,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude');
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State');
         assert.equal(eventEmitted, true, 'Invalid event emitted');
-    })
+    });
 
     // 5th Test
     it("Testing smart contract function buyItem() that allows a distributor to buy coffee", async() => {
@@ -240,7 +240,7 @@ contract('SupplyChain', function(accounts) {
 
     // 7th Test
     it("Testing smart contract function receiveItem() that allows a retailer to mark coffee received", async() => {
-        const supplyChain = await SupplyChain.deployed()
+        const supplyChain = await SupplyChain.deployed();
 
         // Declare and Initialize a variable for event
         var eventEmitted = false;
@@ -322,7 +322,7 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude');
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State');
         assert.equal(eventEmitted, true, 'Invalid event emitted');
-    })
+    });
 
     // 10th Test
     it("Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain", async() => {
@@ -342,6 +342,6 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferOne[7], originFarmLongitude, 'Error: Missing or Invalid originFarmLongitude');
         assert.equal(resultBufferTwo[5], 0, 'Error: Invalid item State');
         assert.equal(eventEmitted, true, 'Invalid event emitted');
-    })
+    });
 
 });
