@@ -10,6 +10,7 @@ UML Diagrams
 As part of the project planning, I created UML activity, sequence, and state diagrams which are included below.
 
 Activity Diagram
+![UML Diagram](images/activity_diagram.png)
 
 
 
