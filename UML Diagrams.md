@@ -9,24 +9,23 @@ UML Diagrams
 
 As part of the project planning, I created UML activity, sequence, and state diagrams which are included below.
 
-Activity Diagram
+# Activity Diagram
 ![UML Diagram](images/activity_diagram.png)
 
 
 
-Sequence Diagram
+# Sequence Diagram
 
 ![UML Diagram](images/sequence_diagram.png)
 
 
-State Diagram
+# State Diagram
 
 ![UML Diagram](images/Coffeestate_diagram.png)
 
 
 
+# Classes (Data Models)
 
-Classes (Data Models)
-
-
+![UML Diagram](images/class_diagram.png)
 
