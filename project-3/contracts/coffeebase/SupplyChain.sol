@@ -68,11 +68,13 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   event Received(uint upc);
   event Purchased(uint upc);
 
-  // Define a modifer that checks to see if msg.sender == owner of the contract
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
+
+  ///// this modifier is not needed because it was already implemented in the ownable contract
+  // // Define a modifer that checks to see if msg.sender == owner of the contract
+  // modifier onlyOwner() {
+  //   require(msg.sender == owner);
+  //   _;
+  // }
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller (address _address) {
@@ -160,7 +162,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public 
+  function harvestItem onlyFarmer(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public 
   {
     // Add the new item as part of Harvest
     items[_upc].upc = _upc;
@@ -222,6 +224,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // and any excess ether sent is refunded back to the buyer
   function buyItem(uint _upc) public payable 
     // Call modifier to check if upc has passed previous supply chain stage
+    onlyDistributor(_upc);
     forSale(_upc);
     // Call modifer to check if buyer has paid enough
     paidEnough(msg.sender);
@@ -275,7 +278,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
     // Call modifier to check if upc has passed previous supply chain stage
     received(_upc);
     // Access Control List enforced by calling Smart Contract / DApp
-    OnlyRetailer(_upc);
+    OnlyConsumer(_upc);
     {
     // Update the appropriate fields - ownerID, consumerID, itemState
     items[_upc].ownerID = msg.sender;
