@@ -11,7 +11,7 @@ contract RetailerRole {
   event AddingRetailer(address indexed account);
   event RemovingRetailer(address indexed account);
   // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role
-  struct Roles.Role public retailers;
+  struct  Roles.Role public retailers;
   // In the constructor make the address that deploys this contract the 1st retailer
   constructor() public {
     _addRetailer(msg.sender);
