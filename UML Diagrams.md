@@ -12,14 +12,17 @@ As part of the project planning, I created UML activity, sequence, and state dia
 Activity Diagram
 
 
+
+Sequence Diagram
+
+![UML Diagram](images/sequence_diagram.png)
+
+
 State Diagram
 
 ![UML Diagram](images/state_diagram.png)
 
 
-Sequence Diagram
-
-![UML Diagram](images/sequence_diagram.png)
 
 
 Classes (Data Models)
