@@ -21,7 +21,7 @@ Sequence Diagram
 
 State Diagram
 
-![UML Diagram](images/state_diagram.png)
+![UML Diagram](images/Coffeestate_diagram.png)
 
 
 
