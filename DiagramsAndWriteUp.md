@@ -8,31 +8,34 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 ### General Project Write-up
 Building this project, I worked on 5 distinct parts:
 
-- **Part 1 - Plan the project:** I made UML diagrams and described the libraries that I chose to use and why I chose to use them
-# UML Diagrams
+# Part 1 - Plan the project:
+ I made UML diagrams and described the libraries that I chose to use and why I chose to use them
+### UML Diagrams
 
 As part of the project planning, I used the online tool Lucid app to create the diagrams needed for this project.  
 
-# Activity Diagram
+- **Activity Diagram** 
 ![UML Diagram](images/activity_diagram.png)
 
-# Sequence Diagram
+- **Sequence Diagram** 
 ![UML Diagram](images/sequence_diagram.png)
 
-# State Diagram
+- **State Diagram** 
 ![UML Diagram](images/Coffeestate_diagram.png)
 
-# Classes (Data Models)
+- **Class (Data Models)** 
 ![UML Diagram](images/class_diagram.png)
 
 
 
-- **Part 2 - Write smart contracts:** Based on the drafted specifications, I defined the required interfaces for the smart contracts and added the specific logic to each of the contracts: (i) `AccessControl` (ii) `Base` (iii) `Core`
+# Part 2 - Write smart contracts:
+ Based on the drafted specifications, I defined the required interfaces for the smart contracts and added the specific logic to each of the contracts: (i) `AccessControl` (ii) `Base` (iii) `Core`
 
-- **Part 3 - Test smart contract code coverage:** I drafted tests to cover every function in the sequence diagram from `Part 1` and ensured that all tests were passing:
-## Testing The dApp
-Below is the output from my tests in the `test` folder.  To run the tests, simply execute `truffle test` at the command line.
-```
+# Part 3 - Testing smart contract :
+ I ran ```truffle compile``` to test my contracts. The code for these test are in the  ```TestSupplyChain.js``` file.
+### Testing The dApp
+Here is the output of my tests:
+<!-- ```
 Contract Owner: accounts[0]  0x27d8d15cbc94527cadf5ec14b69519ae23288b95
 Farmer: accounts[1]  0x018c2dabef4904ecbd7118350a0c54dbeae3549a
 Distributor: accounts[2]  0xce5144391b4ab80668965f2cc4f2cc102380ef0a
@@ -55,19 +58,19 @@ Consumer: accounts[4]  0xd37b7b8c62be2fdde8daa9816483aebdbd356088
 
 
   11 passing (821ms)
-```
+``` -->
 
 ## Running the dApp
 Screenshots etc
 
 
-- **Part 4 - Deploy smart contracts on Rinkeby:** I used the Truffle framework and Infura to deploy my smart contracts onto the Rinkeby test network:
-# The contract address for this project is: 
+# Part 4 - Deploy smart contracts on Rinkeby TestNet:
+ I used the Truffle framework and Infura to deploy my smart contracts onto the Rinkeby test network:
+## The contract address for this project is: 
 
-- **Part 5 - Build the frontend:** I modified the frontend UI that allows users to interact with the smart contracts from the web using web3.js and other regular web technologies such as HTML and Css
+# Part 5 - Build the frontend:
+I modified the frontend UI that allows users to interact with the smart contracts from the web using web3.js and other regular web technologies such as HTML and Css.
 
-
-Smart contract documentation can be generated using `solidity-docgen`.
 
 
 ### Libraries Write-up
