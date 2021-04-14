@@ -63,7 +63,7 @@ Screenshots etc
 
 # Part 4 - Deploy smart contracts on Rinkeby TestNet:
  I used the Truffle framework and Infura to deploy my smart contracts onto the Rinkeby test network:
-## The contract address for this project is: 
+#### The contract address for this project on the Rinkeby test network is: 
 
 # Part 5 - Build the frontend:
 I modified the frontend UI that allows users to interact with the smart contracts from the web using web3.js and other regular web technologies such as HTML and Css.
