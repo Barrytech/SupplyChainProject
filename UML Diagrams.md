@@ -30,3 +30,8 @@ As part of the project planning, I used the online tool Lucid app to create the 
 ![UML Diagram](images/class_diagram.png)
 
 
+Libraries Write-up
+
+
+# The contract address for this project is: 0x3cba8313D961e4a01e374b481c8784e8cB693229
+
