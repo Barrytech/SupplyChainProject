@@ -26,7 +26,13 @@ As part of the project planning, I used the online tool Lucid app to create the 
 
 
 # Part 2 - Write smart contracts:
- Based on the drafted specifications, I defined the required interfaces for the smart contracts and added the specific logic to each of the contracts: (i) `AccessControl` (ii) `Base` (iii) `Core`
+  The project instructions came with layed out specifications on what contracts are needed.
+  I added the required logic and wrote the functions needed for each individual contract. (i) `coffeAccessControl` (ii) `coffeeBase` (iii) `coffeeCore`
+  - **coffeeAccessControl**
+
+  - **coffeeBase**
+
+  - **coffeeCore**
 
 # Part 3 - Testing smart contract :
  I ran ```truffle compile``` to test my contracts. The code for these test are in the  ```TestSupplyChain.js``` file.
@@ -57,8 +63,8 @@ Consumer: accounts[4]  0xd37b7b8c62be2fdde8daa9816483aebdbd356088
   11 passing (821ms)
 ``` -->
 
-## Running the dApp
-Screenshots etc
+## Running the application:
+  Screenshot or demo to be added here:
 
 
 # Part 4 - Deploy smart contracts on Rinkeby TestNet:
