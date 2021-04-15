@@ -63,7 +63,56 @@ Screenshots etc
 
 # Part 4 - Deploy smart contracts on Rinkeby TestNet:
  I used the Truffle framework and Infura to deploy my smart contracts onto the Rinkeby test network:
-#### The contract address for this project on the Rinkeby test network is: 
+```
+barry@Abdouls-MBP SupplyChainProject % truffle migrate -reset
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1618429825551
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x3643dcd449fd5c07879e73b512f4d298a1169dd7e62a558db06cb40a3d0dc2dc
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xFEeCfF2CB7d6f3BfcBE5fa41c49c8fB642f2dDbF
+   > block number:        1
+   > block timestamp:     1618478769
+   > account:             0x27D8D15CbC94527cAdf5eC14B69519aE23288B95
+   > balance:             99.99616114
+   > gas used:            191943 (0x2edc7)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00383886 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00383886 ETH
+
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.00383886 ETH
+
+```
+barry@Abdouls-MBP SupplyChainProject % 
+### The contract address for this project on the Rinkeby test network is: ####0xFEeCfF2CB7d6f3BfcBE5fa41c49c8fB642f2dDbF 
+
+
 
 # Part 5 - Build the frontend:
 I modified the frontend UI that allows users to interact with the smart contracts from the web using web3.js and other regular web technologies such as HTML and Css.
