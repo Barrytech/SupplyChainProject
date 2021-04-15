@@ -30,19 +30,19 @@ As part of the project planning, I used the online tool Lucid app to create the 
   I added the required logic and wrote the functions needed for each individual contract. (i) `coffeAccessControl` (ii) `coffeeBase` (iii) `coffeeCore`
   - **coffeeAccessControl**
 
-        -```ConsumerRole.sol```:
+        ```ConsumerRole.sol```:
 
 
-        -```DistributorRole.sol```:
+        ```DistributorRole.sol```:
 
 
-        -```FarmerRole.sol```:
+        ```FarmerRole.sol```:
 
 
-        -```RetailerRole.sol```:
+        ```RetailerRole.sol```:
 
 
-        -```Roles.sol```:
+        ```Roles.sol```:
 
   - **coffeeBase**
 
