@@ -30,27 +30,27 @@ As part of the project planning, I used the online tool Lucid app to create the 
   I added the required logic and wrote the functions needed for each individual contract. (i) `coffeAccessControl` (ii) `coffeeBase` (iii) `coffeeCore`
   - **coffeeAccessControl**
 
-        - ConsumerRole.sol: This contract 
+        - *ConsumerRole.sol*: This contract 
 
 
-        - DistributorRole.sol: This contract
+        - *DistributorRole.sol*: This contract
 
 
-        - FarmerRole.sol: This contract
+        - *FarmerRole.sol*: This contract
 
 
-        - RetailerRole.sol: This contract
+        - *RetailerRole.sol* This contract
 
 
-        - Roles.sol: This contract
+        - *Roles.sol*: This contract
 
   - **coffeeBase**
 
-        - SupplyChain.sol This contract
+        - *SupplyChain.sol* This contract
 
   - **coffeeCore**
 
-        - Ownable.sol: This contract
+        - *Ownable.sol*: This contract
 
 # Part 3 - Testing smart contract :
  I ran ```truffle compile``` to test my contracts. The code for these test are in the  ```TestSupplyChain.js``` file.
