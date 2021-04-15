@@ -109,8 +109,8 @@ Summary
 > Final cost:          0.00383886 ETH
 
 ```
-barry@Abdouls-MBP SupplyChainProject % 
-### The contract address for this project on the Rinkeby test network is: ####0xFEeCfF2CB7d6f3BfcBE5fa41c49c8fB642f2dDbF 
+
+#### The contract address Rinkeby test network: **0xFEeCfF2CB7d6f3BfcBE5fa41c49c8fB642f2dDbF** 
 
 
 
