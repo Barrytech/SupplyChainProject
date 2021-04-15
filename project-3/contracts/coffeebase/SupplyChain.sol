@@ -162,8 +162,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-  function harvestItem onlyFarmer(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public 
-  {
+  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public onlyFarmer {
     // Add the new item as part of Harvest
     items[_upc].upc = _upc;
     items[_upc].originFarmerID = _originFarmerID;
@@ -224,7 +223,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // and any excess ether sent is refunded back to the buyer
   function buyItem(uint _upc) public payable 
     // Call modifier to check if upc has passed previous supply chain stage
-    onlyDistributor(_upc);
+    onlyDistributor();
     forSale(_upc);
     // Call modifer to check if buyer has paid enough
     paidEnough(msg.sender);
@@ -262,7 +261,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
     // Call modifier to check if upc has passed previous supply chain stage
     shipped(_upc);
     // Access Control List enforced by calling Smart Contract / DApp
-    onlyRetailer(_upc);
+    onlyRetailer();
     {
     // Update the appropriate fields - ownerID, retailerID, itemState
     items[_upc].ownerID = msg.sender;
@@ -278,7 +277,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
     // Call modifier to check if upc has passed previous supply chain stage
     received(_upc);
     // Access Control List enforced by calling Smart Contract / DApp
-    OnlyConsumer(_upc);
+    onlyConsumer();
     {
     // Update the appropriate fields - ownerID, consumerID, itemState
     items[_upc].ownerID = msg.sender;
