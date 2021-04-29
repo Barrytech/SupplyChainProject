@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-pragma solidity ^0.8.3;
-=======
 pragma solidity ^0.5.16;
->>>>>>> changesmade
 
 import "../coffeecore/Ownable.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
@@ -166,11 +162,7 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-<<<<<<< HEAD
-  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public onlyFarmer {
-=======
   function harvestItem(uint _upc, address payable _originFarmerID, string memory _originFarmName, string memory _originFarmInformation, string  memory _originFarmLatitude, string  memory _originFarmLongitude, uint _productID, string  memory _productNotes) public onlyFarmer {
->>>>>>> changesmade
     // Add the new item as part of Harvest
     items[_upc].upc = _upc;
     items[_upc].originFarmerID = _originFarmerID;
@@ -178,13 +170,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
     items[_upc].originFarmInformation = _originFarmInformation;
     items[_upc].originFarmLatitude = _originFarmLatitude;
     items[_upc].originFarmLongitude = _originFarmLongitude;
-<<<<<<< HEAD
-    items[_upc].productNotes = _productNotes;
-=======
     items[_upc].productID = _productID;
     items[_upc].productNotes = _productNotes;
 
->>>>>>> changesmade
     // Increment sku
     sku = sku + 1;
     // Emit the appropriate event
@@ -195,16 +183,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
   function processItem(uint _upc) public 
   // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-  harvested(_upc);
-  // Call modifier to verify caller of this function
-  verifyCaller(items[_upc].originFarmerID);
-  {
-=======
   harvested(_upc)
   // Call modifier to verify caller of this function
   verifyCaller(items[_upc].originFarmerID) {
->>>>>>> changesmade
     // Update the appropriate fields
     items[_upc].itemState = State.Processed;
     // Emit the appropriate event
@@ -214,16 +195,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
   function packItem(uint _upc) public 
   // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-  processed(_upc);
-  // Call modifier to verify caller of this function
-  verifyCaller(items[_upc].originFarmerID);
-  {
-=======
   processed(_upc)
   // Call modifier to verify caller of this function
   verifyCaller(items[_upc].originFarmerID) {
->>>>>>> changesmade
     // Update the appropriate fields
     items[_upc].itemState = State.Packed;
     // Emit the appropriate event
@@ -233,16 +207,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
   function sellItem(uint _upc, uint _price) public 
   // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-  packed(_upc);
-  // Call modifier to verify caller of this function
-  verifyCaller(items[_upc].originFarmerID);
-  {
-=======
   packed(_upc)
   // Call modifier to verify caller of this function
   verifyCaller(items[_upc].originFarmerID) {
->>>>>>> changesmade
     // Update the appropriate fields
     items[_upc].itemState = State.ForSale;
     items[_upc].productPrice = _price;
@@ -255,22 +222,12 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // and any excess ether sent is refunded back to the buyer
   function buyItem(uint _upc) public payable 
     // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-    onlyDistributor();
-    forSale(_upc);
-    // Call modifer to check if buyer has paid enough
-    paidEnough(msg.sender);
-    // Call modifer to send any excess ether back to buyer
-    checkValue(_upc);
-    {
-=======
     onlyDistributor()
     forSale(_upc)
     // Call modifer to check if buyer has paid enough
     paidEnough(msg.value)
     // Call modifer to send any excess ether back to buyer
     checkValue(_upc) {
->>>>>>> changesmade
     
     // Update the appropriate fields - ownerID, distributorID, itemState
     items[_upc].ownerID = msg.sender;
@@ -286,16 +243,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // Use the above modifers to check if the item is sold
   function shipItem(uint _upc) public 
     // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-    sold(_upc);
-    // Call modifier to verify caller of this function
-    verifyCaller(items[_upc].originFarmerID);
-    {
-=======
     sold(_upc)
     // Call modifier to verify caller of this function
     verifyCaller(items[_upc].distributorID) {
->>>>>>> changesmade
     // Update the appropriate fields
     items[_upc].itemState = State.Shipped;
     // Emit the appropriate event
@@ -306,16 +256,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // Use the above modifiers to check if the item is shipped
   function receiveItem(uint _upc) public 
     // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-    shipped(_upc);
-    // Access Control List enforced by calling Smart Contract / DApp
-    onlyRetailer();
-    {
-=======
     shipped(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
     onlyRetailer() {
->>>>>>> changesmade
     // Update the appropriate fields - ownerID, retailerID, itemState
     items[_upc].ownerID = msg.sender;
     items[_upc].retailerID = msg.sender;
@@ -328,16 +271,9 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   // Use the above modifiers to check if the item is received
   function purchaseItem(uint _upc) public 
     // Call modifier to check if upc has passed previous supply chain stage
-<<<<<<< HEAD
-    received(_upc);
-    // Access Control List enforced by calling Smart Contract / DApp
-    onlyConsumer();
-    {
-=======
     received(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
     onlyConsumer() {
->>>>>>> changesmade
     // Update the appropriate fields - ownerID, consumerID, itemState
     items[_upc].ownerID = msg.sender;
     items[_upc].consumerID = msg.sender;
@@ -360,19 +296,11 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   ) 
   {
   // Assign values to the 8 parameters
-<<<<<<< HEAD
-  itemSKU = items[_upc].itemSKU;
-  itemUPC = items[_upc].itemUPC;
-  ownerID = items[_upc].ownerID;
-  originFarmerID = items[_upc].originFarmerID;
-  originFarmName = items[_upc].originFarmName;,
-=======
   itemSKU = items[_upc].sku;
   itemUPC = items[_upc].upc;
   ownerID = items[_upc].ownerID;
   originFarmerID = items[_upc].originFarmerID;
   originFarmName = items[_upc].originFarmName;
->>>>>>> changesmade
   originFarmInformation = items[_upc].originFarmInformation;
   originFarmLatitude = items[_upc].originFarmLatitude;
   originFarmLongitude = items[_upc].originFarmLongitude;
@@ -404,33 +332,6 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
   address consumerID
   ) 
   {
-<<<<<<< HEAD
-    // Assign values to the 9 parameters
-  itemSKU = items[_upc].sku;
-  itemUPC = items[_upc].upc;
-  productID = items[_upc].productID;
-  productNotes = items[_upc].productNotes;
-  productPrice = items[_upc].productPrice;
-  itemState = uint(items[_upc].itemState);
-  distributorID = items[_upc].distributorID;
-  retailerID = items[_upc].retailerID;
-  consumerID = items[_upc].consumerID;
-    
-  return 
-  (
-  itemSKU,
-  itemUPC,
-  productID,
-  productNotes,
-  productPrice,
-  itemState,
-  distributorID,
-  retailerID,
-  consumerID
-  );
-  }
-}
-=======
       // Assign values to the 9 parameters
     itemSKU = items[_upc].sku;
     itemUPC = items[_upc].upc;
@@ -457,4 +358,3 @@ contract SupplyChain  is Ownable, DistributorRole, FarmerRole, RetailerRole, Con
 
     }
 }
->>>>>>> changesmade

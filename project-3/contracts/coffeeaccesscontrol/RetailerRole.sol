@@ -1,9 +1,5 @@
 //SPDX-License-Identifier: MIT
-<<<<<<< HEAD
-pragma solidity ^0.8.3;
-=======
 pragma solidity ^0.5.16;
->>>>>>> changesmade
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -15,11 +11,7 @@ contract RetailerRole {
   event AddingRetailer(address indexed account);
   event RemovingRetailer(address indexed account);
   // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role
-<<<<<<< HEAD
-  struct  Roles.Role public retailers;
-=======
   Roles.Role private retailers;
->>>>>>> changesmade
   // In the constructor make the address that deploys this contract the 1st retailer
   constructor() public {
     _addRetailer(msg.sender);
@@ -55,10 +47,6 @@ contract RetailerRole {
   // Define an internal function '_removeRetailer' to remove this role, called by 'removeRetailer'
   function _removeRetailer(address account) internal {
     retailers.remove(account);
-<<<<<<< HEAD
-    emit RemovingRetail(account);
-=======
     emit RemovingRetailer(account);
->>>>>>> changesmade
   }
 }
