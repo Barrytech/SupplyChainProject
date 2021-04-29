@@ -35,10 +35,10 @@ Clone this repository:
 git clone https://github.com/Barrytech/SupplyChainProject
 ```
 
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
+Change directory to ```project-3``` folder and install all requisite npm packages (as listed in ```package.json```):
 
 ```
-cd project-6
+cd project-3
 npm install
 ```
 
