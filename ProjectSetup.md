@@ -32,7 +32,11 @@ A step by step series of examples that tell you have to get a development env ru
 Clone this repository:
 
 ```
+<<<<<<< HEAD
 git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
+=======
+git clone https://github.com/Barrytech/SupplyChainProject
+>>>>>>> changesmade
 ```
 
 Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):

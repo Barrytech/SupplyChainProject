@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 pragma solidity ^0.8.3;
+=======
+pragma solidity ^0.5.16;
+>>>>>>> changesmade
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -7,10 +11,17 @@ import "./Roles.sol";
 contract DistributorRole {
   using Roles for Roles.Role;
   // Define 2 events, one for Adding, and other for Removing
+<<<<<<< HEAD
   event DistributorRoleAdded(address indexed account);
   event DistributorRoleRemoved(address indexed account);
   // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role
   struct Roles.Role public distributors;
+=======
+  event DistributorAdded(address indexed account);
+  event DistributorRemoved(address indexed account);
+  // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role
+  Roles.Role private distributors;
+>>>>>>> changesmade
   // In the constructor make the address that deploys this contract the 1st distributor
   constructor() public {
     _addDistributor(msg.sender);
