@@ -35,10 +35,10 @@ Clone this repository:
 git clone https://github.com/Barrytech/SupplyChainProject
 ```
 
-Change directory to ```project-3``` folder and install all requisite npm packages (as listed in ```package.json```):
+Change directory to ```DApp``` folder and install all requisite npm packages (as listed in ```package.json```):
 
 ```
-cd project-3
+cd DApp
 npm install
 ```
 
