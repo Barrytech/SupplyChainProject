@@ -56,32 +56,6 @@ As part of the project planning, I used the online tool Lucid app to create the 
  I ran ```truffle compile``` to test my contracts. The code for these test are in the  ```TestSupplyChain.js``` file.
 ### Testing The dApp
 Here is the output of my tests:
-```
-Contract Owner: accounts[0]  0x27d8d15cbc94527cadf5ec14b69519ae23288b95
-Farmer: accounts[1]  0x018c2dabef4904ecbd7118350a0c54dbeae3549a
-Distributor: accounts[2]  0xce5144391b4ab80668965f2cc4f2cc102380ef0a
-Retailer: accounts[3]  0x460c31107dd048e34971e57da2f99f659add4f02
-Consumer: accounts[4]  0xd37b7b8c62be2fdde8daa9816483aebdbd356088
-
-
-  Contract: SupplyChain
-    ✓ Test that roles are correctly added to contract (184ms)
-    ✓ Testing smart contract function harvestItem() that allows a farmer to harvest coffee (108ms)
-    ✓ Testing smart contract function processItem() that allows a farmer to process coffee (58ms)
-    ✓ Testing smart contract function packItem() that allows a farmer to pack coffee (58ms)
-    ✓ Testing smart contract function sellItem() that allows a farmer to sell coffee (55ms)
-    ✓ Testing smart contract function buyItem() that allows a distributor to buy coffee (67ms)
-    ✓ Testing smart contract function shipItem() that allows a distributor to ship coffee (66ms)
-    ✓ Testing smart contract function receiveItem() that allows a retailer to mark coffee received (65ms)
-    ✓ Testing smart contract function purchaseItem() that allows a consumer to purchase coffee (52ms)
-    ✓ Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain
-    ✓ Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain
-
-
-  11 passing (821ms)
-```
-
-
 ![truffle test](images/truffle_test.png)
 
 ## Running the application:

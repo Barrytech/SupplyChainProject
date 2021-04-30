@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="mystyle.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
     body {
         font-family: "Times New Roman", Georgia, Serif;
@@ -18,12 +27,87 @@
     }
     
     h2,
-    h3,
+    h3 {
+        text-align: center;
+        font-weight: bolder;
+    }
+    
     h4,
-    h5,
+    h5 {
+        text-align: center;
+        font-weight: bolder;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 2em;
+    }
+    
     h6 {
         font-family: "Playfair Display";
         letter-spacing: 5px;
+    }
+    
+    p {
+        font-size: 1.5em;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .bold {
+        font-weight: bolder;
+    }
+    
+    input {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 10px 0;
+    }
+    
+    button {
+        cursor: pointer;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        background-color: #00BCD4;
+        font-size: 16px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    .sell {
+        background-color: white;
+        color: #D1C4E9;
+    }
+    
+    .ftc-intro {
+        background-color: #0097A7;
+        color: white;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .form-group {
+        background-color: #0097A7;
+        color: black;
+        /* width: 50%;
+        padding: 30px; */
+        border-radius: 4px;
+        background-color: #f8f8f8;
+    }
+    
+    .form-break {
+        background-color: #fff;
+        color: white;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .horizontal-rule {
+        background-color: #BDBDBD;
     }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -60,6 +144,133 @@
     <!-- Page content -->
     <div class="w3-content" style="max-width:1100px">
 
+        <!-- Menu Section -->
+        <div class="w3-row w3-padding-64" id="menu">
+            <div class=form-break></div>
+            <h2>Details at the Farmer's level</h2>
+            <div class=form-break></div>
+            <p>We started tracking the coffee from the farmer. As you can see on the form below, we are able to enter information we need to know about save in the blockchain. Since the blockchain will be playing the role of our database, we have all the
+                info in a public and immutable database. Which is the point of bringing supplychain into the blockchain, the decentralized ledger.
+            </p>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class=form-break></div>
+                    <div class=form-break></div>
+                    <div class=form-break></div>
+                    <div class=form-break></div>
+                    <div class="form-group">
+                        Farmer ID
+                        <br>
+                        <input type="text" id="originFarmerID" name="originFarmerID" value="0x99c289eb2aacec289631a5ddf62cf27a63d4494f" size="50"><br> Farmer Name
+                        <br>
+                        <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br> Farm Information
+                        <br>
+                        <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br> Farm Latitude
+                        <br>
+                        <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br> Farm Longitude
+                        <br>
+                        <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
+                        <br>
+                        <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
+                        <button class="btn-process" id="button" type="button" data-id="2">Process</button>
+                        <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
+                        <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2> Live Transactions <span id="ftc-history"></span></h2>
+                    <div>
+                        <ul id="ftc-events">
+                            <!-- Events will appear here from app.js -->
+                        </ul>
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <!-- Distribution and Product details Section -->
+        <div class="w3-container w3-padding-64" id="contact">
+            <h2> Distributor and Retailer Level</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Product Overview</h3>
+                    <div class="form-group">
+                        Product Notes
+                        <br>
+                        <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso" size="60"><br> Product Price
+                        <br>
+                        <input type="number" id="productPrice" name="productPrice" value=1>ETH<br> Distributor ID
+                        <br>
+                        <input type="text" id="distributorID" name="distributorID" value="0xf1b1bcd24dad92303dd9fe78be639f7bcf9c238d" size="50">
+                        <br> Retailer ID
+                        <br>
+                        <input type="text" id="retailerID" name="retailerID" value="0x0fb2bfefd526966c87efa19f6693d50971763fc2" size="50"><br> Distributor ID
+                        <br>
+                        <input type="text" id="consumerID" name="consumerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4" size="50"><br>
+                        <br>
+                        <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+                        <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+                        <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
+                        <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3> Live Transactions <span id="ftc-history"></span></h3>
+                    <div>
+                        <ul id="ftc-events">
+                            <!-- Events will appear here from app.js -->
+                        </ul>
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Details of a Specific item-->
+        <div class="w3-container w3-padding-64" id="contact">
+            <h2> Details of Product</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Product Info</h3>
+                    <div class="form-group">
+                        SKU
+                        <br>
+                        <input class="input-field" type="number" id="sku" name="sku" value=1><br> UPC
+                        <br>
+                        <input type="number" id="upc" name="upc" value=1><br> Current Owner ID
+                        <br>
+                        <input type="text" id="ownerID" name="ownerID" value="0x963865f57804b38459dd4b2da2f760211a200438" size="50"><br>
+                        <div class=button-div>
+                            <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
+                            <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3> Live Transactions <span id="ftc-history"></span></h3>
+                    <div>
+                        <ul id="ftc-events">
+                            <!-- Events will appear here from app.js -->
+                        </ul>
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
         <!-- About Section -->
         <div class="w3-row w3-padding-64" id="about">
             <div class="w3-col m6 w3-padding-large w3-hide-small">
@@ -76,54 +287,6 @@
         </div>
 
         <hr>
-
-        <!-- Menu Section -->
-        <div class="w3-row w3-padding-64" id="menu">
-            <div class=form-break></div>
-            <h2>Farm Details</h2>
-            <div class="form-group">
-                Farmer ID
-                <br>
-                <input type="text" id="originFarmerID" name="originFarmerID" value="0x99c289eb2aacec289631a5ddf62cf27a63d4494f" size="50"><br> Farm Name
-                <br>
-                <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br> Farm Information
-                <br>
-                <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br> Farm Latitude
-                <br>
-                <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br> Farm Longitude
-                <br>
-                <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
-                <br>
-                <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
-                <button class="btn-process" id="button" type="button" data-id="2">Process</button>
-                <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
-                <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
-            </div>
-            <div class="w3-col l6 w3-padding-large">
-                <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Contact Section -->
-        <div class="w3-container w3-padding-64" id="contact">
-            <h2>Product Overview</h2>
-            <div class="form-group">
-                SKU
-                <br>
-                <input class="input-field" type="number" id="sku" name="sku" value=1><br> UPC
-                <br>
-                <input type="number" id="upc" name="upc" value=1><br> Current Owner ID
-                <br>
-                <input type="text" id="ownerID" name="ownerID" value="0x963865f57804b38459dd4b2da2f760211a200438" size="50"><br>
-                <div class=button-div>
-                    <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
-                    <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
-                </div>
-            </div>
-        </div>
-
         <!-- End page content -->
     </div>
 
@@ -134,4 +297,4 @@
 
 </body>
 
-</html> -->
+</html>
