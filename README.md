@@ -85,11 +85,13 @@ All 10 tests should pass.
 ![truffle test](images/truffle_test.png)
 
 In a separate terminal window, launch the DApp:
-
+Make sure you are inside the DApp directory and then run
 ```
 npm run dev
 ```
+The DApp should then start running on http://localhost:3000
 
+![truffle test](images/LandingPage.png)
 ## Built With
 
 * [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
