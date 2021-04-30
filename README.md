@@ -61,7 +61,7 @@ Here is the output of my tests:
 ## Running the application:
   Screenshot or demo to be added here:
 This is the landing page of my application
-![theDAoo](LandingPage.png)
+![theDApp](images/LandingPage.png)
 
 
 # Part 4 - Deploy smart contracts on Rinkeby TestNet:
