@@ -56,7 +56,7 @@ As part of the project planning, I used the online tool Lucid app to create the 
  I ran ```truffle compile``` to test my contracts. The code for these test are in the  ```TestSupplyChain.js``` file.
 ### Testing The dApp
 Here is the output of my tests:
-<!-- ```
+```
 Contract Owner: accounts[0]  0x27d8d15cbc94527cadf5ec14b69519ae23288b95
 Farmer: accounts[1]  0x018c2dabef4904ecbd7118350a0c54dbeae3549a
 Distributor: accounts[2]  0xce5144391b4ab80668965f2cc4f2cc102380ef0a
@@ -79,7 +79,10 @@ Consumer: accounts[4]  0xd37b7b8c62be2fdde8daa9816483aebdbd356088
 
 
   11 passing (821ms)
-``` -->
+```
+
+
+![truffle test](images/truffle_test.png)
 
 ## Running the application:
   Screenshot or demo to be added here:

@@ -1,17 +1,17 @@
 body {
-  background-color:#fff;
-  padding: 2em;
-  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-  color: #212121;
+    background-color: #fff;
+    padding: 2em;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    color: #212121;
 }
+
 .container {
-  width: 80%;
-  margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
-
-.bold { 
-  font-weight: bolder;
+.bold {
+    font-weight: bolder;
 }
 
 input {
@@ -33,34 +33,37 @@ button {
     cursor: pointer;
 }
 
-.sell { 
-  background-color: white;
-  color: #D1C4E9;
+.sell {
+    background-color: white;
+    color: #D1C4E9;
 }
 
 .ftc-intro {
-  background-color:#0097A7;
-  color:white;
-  width:100%;
-  padding:20px;
+    background-color: #0097A7;
+    color: white;
+    width: 100%;
+    padding: 20px;
 }
 
 .form-group {
-  background-color:#0097A7;
-  color:black;
-  width:50%;
-  padding:30px;
-  border-radius: 4px;
-  background-color: #f8f8f8;
+    background-color: #0097A7;
+    color: black;
+    width: 50%;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: #f8f8f8;
 }
 
 .form-break {
-  background-color:#fff;
-  color:white;
-  width:100%;
-  padding:5px;
+    background-color: #fff;
+    color: white;
+    width: 100%;
+    padding: 5px;
 }
 
 .horizontal-rule {
-  background-color:#BDBDBD;
+    background-color: #BDBDBD;
 }
+
+
+/* //here starts the code for the app added: */
