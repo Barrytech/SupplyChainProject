@@ -288,7 +288,7 @@ App = {
 
     fetchItemBufferOne: function() {
         ///   event.preventDefault();
-        ///    var processId = parseInt($(event.target).data('id'));
+        /// var processId = parseInt($(event.target).data('id'));
         App.upc = $('#upc').val();
         console.log('upc', App.upc);
 

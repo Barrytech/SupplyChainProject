@@ -54,18 +54,20 @@ As part of the project planning, I used the online tool Lucid app to create the 
 
 # Part 3 - Testing smart contract :
  I ran ```truffle compile``` to test my contracts. The code for these test are in the  ```TestSupplyChain.js``` file.
-### Testing The dApp
+### Testing The contract by running 11 test written to call the contract's functions
 Here is the output of my tests:
 ![truffle test](images/truffle_test.png)
 
 ## Running the application:
   Screenshot or demo to be added here:
+This is the landing page of my application
+![theDAoo](LandingPage.png)
 
 
 # Part 4 - Deploy smart contracts on Rinkeby TestNet:
  I used the Truffle framework and Infura to deploy my smart contracts onto the Rinkeby test network:
 ```
-barry@Abdouls-MBP SupplyChainProject % truffle migrate -reset
+
 
 Compiling your contracts...
 ===========================
